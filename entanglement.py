@@ -1,6 +1,5 @@
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit_aer import AerSimulator
-from qiskit.visualization import plot_histogram
 
 # Create quantum registers with 2 qubits
 qr = QuantumRegister(2, 'q')
@@ -11,6 +10,7 @@ circuit = QuantumCircuit(qr, cr)
 
 # Create Bell state (entanglement)
 circuit.h(qr[0])    # Apply Hadamard gate to the first qubit
+# circuit.x(qr[1])    # Apply X gate to the second qubit to set it to |1>
 circuit.cx(qr[0], qr[1])  # Apply CNOT gate with control qubit 0 and target qubit 1
 
 # Measure both qubits
