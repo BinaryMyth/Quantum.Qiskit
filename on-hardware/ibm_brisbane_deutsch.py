@@ -85,7 +85,8 @@ print(balanced_circuit)
 
 # Initialize the QiskitRuntimeService
 # This loads your saved credentials from disk.
-service = QiskitRuntimeService(channel="ibm_cloud", token="MY_API_KEY", region="us-east")
+# service = QiskitRuntimeService(channel="ibm_cloud", token="MY_API_KEY", region="us-east")
+service = QiskitRuntimeService()
 
 # Select a backend. Here, we use a simulator. You can replace this
 # with a real quantum device if you have access to it.
